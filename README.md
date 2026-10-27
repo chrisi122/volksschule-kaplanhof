@@ -4,9 +4,9 @@ Dieses Studienprojekt setzt das bereitgestellte Konzept „MEILENSTEIN 1_Homepag
 
 ## Gemeinsamer Weblink
 
-GitHub Pages wird für dieses Projekt eingerichtet. Der bestätigte Weblink und das Ergebnis der ersten Veröffentlichung werden nach Abschluss hier eingetragen.
+[Website ansehen](https://chrisi122.github.io/volksschule-kaplanhof/) · [Veröffentlichungsstatus](https://github.com/chrisi122/volksschule-kaplanhof/actions/workflows/pages.yml)
 
-Nach der Einrichtung veröffentlicht GitHub Actions jeden zu `main` übertragenen Stand automatisch. Die Gruppe und die Vortragende sehen die Website über denselben Weblink. Eine lokale Speicherung wird durch einen Git-Commit und `git push` zu GitHub übertragen; erst diese Übertragung startet die Veröffentlichung. Der aktuelle Zustand ist im GitHub-Projekt unter „Actions“ sichtbar.
+GitHub Actions veröffentlicht jeden zu `main` übertragenen Stand nach erfolgreicher Prüfung automatisch. Die Gruppe und die Vortragende sehen die Website über denselben Weblink. Eine lokale Speicherung wird durch einen Git-Commit und `git push` zu GitHub übertragen; erst diese Übertragung startet die Veröffentlichung. Der aktuelle Zustand ist über den Veröffentlichungsstatus sichtbar.
 
 Die Veröffentlichung enthält nur HTML- und CSS-Dateien sowie einen gegebenenfalls vorhandenen Medienordner `assets`. Die lokale Abgabedokumentation wird weder in das öffentliche GitHub-Projekt aufgenommen noch als Website ausgeliefert.
 
@@ -40,7 +40,7 @@ Die Texte, Menüreihenfolge und sechs Farbwerte stammen aus dem Konzept. Die dre
 
 Die Website verwendet keine externen Schriftarten, Skripte, Bilder, Tracking-Dienste oder Cookies. Für die Darstellung ist kein JavaScript notwendig. Fotos, Kontaktdaten, Personen, Klassenlisten, Termine und zusätzliche Angebote wurden entsprechend dem Konzept nicht ergänzt.
 
-Die Veröffentlichung über GitHub Pages wurde im weiteren Arbeitsauftrag ausdrücklich gewünscht. Der Status der Einrichtung steht oben. Die im Konzept vorgesehenen weiteren inhaltlichen Prüfungen bleiben einem späteren Arbeitsschritt vorbehalten.
+Die Veröffentlichung über GitHub Pages wurde im weiteren Arbeitsauftrag ausdrücklich gewünscht. Der Status der Veröffentlichung ist oben verlinkt. Die im Konzept vorgesehenen weiteren inhaltlichen Prüfungen bleiben einem späteren Arbeitsschritt vorbehalten.
 
 ## Änderungen veröffentlichen
 

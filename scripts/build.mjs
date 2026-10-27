@@ -1,4 +1,4 @@
-import { cp, lstat, mkdir, readFile, readdir, rm, writeFile } from 'node:fs/promises';
+import { cp, lstat, mkdir, readFile, readdir, unlink, writeFile } from 'node:fs/promises';
 import { resolve, relative } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -55,8 +55,21 @@ for (const file of websiteFiles.filter(name => name.endsWith('.html'))) {
   }
 }
 
-await rm(output, { recursive: true, force: true });
 await mkdir(output, { recursive: true });
+// OneDrive kann das Löschen des Ausgabeordners selbst sperren. Daher nur
+// die alten Dateien entfernen und die leeren Verzeichnisse beibehalten.
+async function clearOutputFiles(directory) {
+  for (const entry of await readdir(directory, { withFileTypes: true })) {
+    const target = resolve(directory, entry.name);
+    const outputPath = relative(output, target);
+    if (!outputPath || outputPath.startsWith('..')) {
+      throw new Error('Ungültiger Pfad beim Leeren der Ausgabe.');
+    }
+    if (entry.isDirectory()) await clearOutputFiles(target);
+    else await unlink(target);
+  }
+}
+await clearOutputFiles(output);
 for (const file of websiteFiles) {
   await cp(resolve(root, file), resolve(output, file));
 }
